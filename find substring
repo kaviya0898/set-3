@@ -1,0 +1,39 @@
+public static void main(String[] args) {
+		String str="test123test123";
+		String search="3test";
+		boolean flag=false;
+		int right=0;
+		for(int index=0;index<str.length();index++)
+		{
+			if(str.charAt(index)==search.charAt(right))
+			{
+				right++;
+				if(right==search.length())
+				{
+					
+					System.out.print("found at");
+					System.out.print(index-search.length()+1);
+					flag=true;
+					break;
+					
+				}
+				
+			}
+			
+			else
+			{
+				right=0;
+				continue;
+			}
+		}
+		if(flag==false)
+		{
+			System.out.println("not found");
+		}
+		
+		}
+
+	
+	}
+
+	
