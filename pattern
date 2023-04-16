@@ -1,0 +1,19 @@
+public static void main(String[] args) {
+		String str="12345";
+		for(int row=0;row<str.length();row++)
+		{
+			for(int column=0;column<str.length();column++)
+			{
+				if(row==column || row+column==str.length()-1)
+				{
+					System.out.print(str.charAt(column));
+				}
+				else
+				{
+					System.out.print(" ");
+				}
+			}
+			System.out.println();
+		}
+		
+		}
