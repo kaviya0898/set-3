@@ -1,6 +1,6 @@
 public static void main(String[] args) {
 		process("a1b3c10");
-
+        //System.out.println(findNumber("345"));
 		}
 
 	private static void process(String str) {
@@ -16,7 +16,7 @@ public static void main(String[] args) {
 				temp++;
 			}
 			index=temp;
-			int range=Integer.parseInt(number);
+			int range=findNumber(number);
 			for(int i=0;i<range;i++)
 			{
 				System.out.print(c+" ");
@@ -24,6 +24,15 @@ public static void main(String[] args) {
 			
 		}
 		
+	}
+
+	private static int findNumber(String number) {
+		int num=0;
+		for(int i=0;i<number.length();i++)
+		{
+			num=num*10+(number.charAt(i))-48;
+		}
+		return num;
 	}
 	
 	       
